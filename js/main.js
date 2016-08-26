@@ -1,22 +1,41 @@
-app.getWeather = function(){
-	var cityId = $( this ).val();
-		$.ajax({
-			url: 'https://api.edx.org/api/courses/v1/courses/2YotnFZFEjr1zCsicMWpAA',
-			success: function( response ){
-				var temp = (Math.floor(response.main.temp - 273.15)*9/5)+32 ;
-				$( '#response' ).text( '°' + temp + ' ' + 'and ' +  '  ' + sky + '  ' + 'wind speed = ' + wind);
-				/* $( '#response' ).text( sky ); */
+// app.getCourses = function(){
+// 	var khanacademy = $( this ).val();
+// 		$.ajax({
+// 			url: 'http://www.khanacademy.org/api/v1/exercises/',
+// 			success: function( response ){
+// 				var coursesNum = response.length ;
+// 				$( '#response' ).text();
+// 				/* $( '#response' ).text( sky ); */
 
+// 		}
+// 	});
+// };
+
+
+var app = { };
+
+app.getCourses = function(){
+	var coursesX = $()
+		$.ajax({
+			url: 'http://www.khanacademy.org/api/v1/exercises',
+			success: function( khanAPI ){
+				var courseList = response.length;
+				$( '#courseList' ).text( temp + '°' );
 		}
 	});
 };
 
-/*
-{
-       "access_token":"2YotnFZFEjr1zCsicMWpAA",
-       "token_type":"example",
-       "expires_in":3600,
-       "refresh_token":"tGzv3JOkF0XG5Qx2TlKWIA",
-       "example_parameter":"example_value"
-     }
-*/
+document.write( Object.keys(coursesX).length );
+
+app.init = function(){
+	addCourseButton.onclick = function(getCourses) { alert("moot!"); };
+}
+
+$( document ).ready( app.init );
+
+
+
+
+
+
+
