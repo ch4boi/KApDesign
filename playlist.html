@@ -26,8 +26,7 @@
 				Drag & drop to edit playlist
 			</div>
 
-				<div id="filterPannel">
-					<div class="close big gray">^</div>
+				<div id="filterBox">
 					<span class="medium-big faded">Description:</span>
 					<span class="filter">
 						<div></div>
@@ -38,6 +37,25 @@
 						</div>
 					</span>
 				</div>
+
+
+				<form id="filterBox">
+					<div class="close big gray">^</div>
+					<span class="medium-big faded">filters:</span>
+					<br>
+					<div id="filterPannel">
+						<form id="filterPannel" action="">
+							<input class="filter" type="checkbox" name="subjects" value="topics"> Subjects
+							<input class="filter" type="checkbox" name="Language" value="Languages"> Languages
+							<input class="filter" type="checkbox" name="Length" value="Length"> Length
+						</form>
+						<a href="" id="apply" >apply filter</a>
+					</div>
+							
+					</span>
+				</form>
+
+
 
 				<div id="playlistID">
 
